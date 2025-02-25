@@ -6,7 +6,7 @@
 
 
 taskWindow::taskWindow(QWidget *parent )  : QMainWindow(parent) {
-        setGeometry(300, 300, 300, 200);
+        setGeometry(300, 300, 400, 200);
         solveButton = new QPushButton("Solve");
         layout = new QVBoxLayout();
         centralWidget = new QWidget();
