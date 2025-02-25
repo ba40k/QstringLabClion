@@ -8,17 +8,22 @@
 
 #include <QMainWindow>
 #include <QLabel>
+#include <QPushButton>
 #include <QVBoxLayout>
 #include <QWidget>
 
 class taskWindow : public QMainWindow {
+protected:
     Q_OBJECT
     QVBoxLayout *layout;
     QWidget *centralWidget;
+    QPushButton *solveButton;
 public:
     taskWindow(QWidget *parent = nullptr);
-    virtual void solve() = delete;
+    virtual void solve() ;
     virtual ~taskWindow();
+    QLayout* getLayout();
+    QPushButton* getSolveButton();
 };
 
 
