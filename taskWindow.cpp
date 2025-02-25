@@ -31,5 +31,5 @@ QLayout* taskWindow::getLayout() {
         return layout;
 }
 taskWindow::~taskWindow() {
-        // Очистка ресурсов, если необходимо
+
 }

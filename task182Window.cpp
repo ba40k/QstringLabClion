@@ -3,7 +3,6 @@
 //
 
 #include "task182Window.h"
-#include <iostream>
 task182Window::task182Window(QWidget *parent) : taskWindow(parent){
     setWindowTitle("task182");
     res = new QLabel();
