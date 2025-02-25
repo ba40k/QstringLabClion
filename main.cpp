@@ -6,6 +6,7 @@
 #include "taskWindow.h"
 #include "task170Window.h"
 #include "task182Window.h"
+#include "task194Window.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -14,14 +15,11 @@ int main(int argc, char *argv[])
    // t.show();
 
     //var7
-    task182Window tsl;
+    task194Window tsl;
     tsl.show();
 
-    taskWindow tw;
-    tw.show();
 
 
-
-    w.show();
+  //  w.show();
     return a.exec();
 }

@@ -11,8 +11,8 @@ task170Window:: task170Window(QWidget *parent) : taskWindow(parent){
     firstStringInput->setPlaceholderText("Enter first string");
     secondStringInput = new QLineEdit();
     secondStringInput->setPlaceholderText("Enter second string");
-    getLayout()->addWidget(secondStringInput);
     getLayout()->addWidget(firstStringInput);
+    getLayout()->addWidget(secondStringInput);
     getLayout()->addWidget(res);
     getLayout()->removeWidget(getSolveButton()); // так как кнопка создалась в конструкторе родителся, то она появилась сверху
     getLayout()->addWidget(getSolveButton());
@@ -30,18 +30,19 @@ void task170Window::solve() {
         ++secondStringCharCounter[x];
     }
     QString ans;
-    for (auto x : secondString) {
-        if (firstStringCharCounter[x]==0) {
-            ans.push_back(x);
-            ans.push_back(' ');
-        }
-    }
     for (auto x : firstString) {
         if (secondStringCharCounter[x]==0) {
             ans.push_back(x);
             ans.push_back(' ');
         }
     }
+    for (auto x : secondString) {
+        if (firstStringCharCounter[x]==0) {
+            ans.push_back(x);
+            ans.push_back(' ');
+        }
+    }
+
 
     res->setText(ans);
 }
