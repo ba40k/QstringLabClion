@@ -8,9 +8,6 @@
 #include <QWidget>
 #include <QVBoxLayout>
 #include <QPushButton>
-#include "task170Window.h"
-#include "task182Window.h"
-#include "task194Window.h"
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -29,9 +26,7 @@ class MainWindow : public QMainWindow
     QPushButton* buttonForTask170;
     QPushButton* buttonForTask182;
     QPushButton* buttonForTask194;
-    task182Window* task182;
-    task170Window* task170;
-    task194Window* task194;
+
 private slots:
     void solveTask170() {
 

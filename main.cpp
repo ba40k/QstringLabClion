@@ -3,7 +3,8 @@
 #include <QApplication>
 #include <QWidget>
 #include <QHBoxLayout>
-#include "task170Window.h"
+#include "taskWindow.h"
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -13,7 +14,8 @@ int main(int argc, char *argv[])
 
     //var7
 
-
+    taskWindow tw;
+    tw.show();
 
     w.show();
     return a.exec();
