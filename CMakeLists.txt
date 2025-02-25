@@ -17,7 +17,7 @@ set(CMAKE_AUTORCC ON)
 set(FORMS
         mainwindow.ui
 )
-add_executable(qtTEST main.cpp mainwindow.cpp)
+add_executable(qtTEST main.cpp mainwindow.cpp task170Window.cpp)
 target_link_libraries(qtTEST
         Qt::Core
         Qt::Gui
