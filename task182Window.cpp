@@ -3,7 +3,7 @@
 //
 
 #include "task182Window.h"
-
+#include <iostream>
 task182Window::task182Window(QWidget *parent) : taskWindow(parent){
     setWindowTitle("task182");
     res = new QLabel();
@@ -25,8 +25,9 @@ void task182Window::solve() {
     QString ans;
     for (int i =0; i < input.length(); i++) {
         if (input[i]==wordStarer && newWord) {
-            while (input[i]!=' ' && i!=input.length()) {
+            while( i!=input.length() && (input[i]!=' ')) {
                 ans.push_back(input[i]);
+                std::cout<<i<<' '<<input.length()<<'\n';
                 i++;
             }
             break;
