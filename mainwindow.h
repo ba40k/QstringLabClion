@@ -29,8 +29,13 @@ class MainWindow : public QMainWindow
     QPushButton* buttonForTask170;
     QPushButton* buttonForTask182;
     QPushButton* buttonForTask194;
+    task182Window* task182;
     task170Window* task170;
+    task194Window* task194;
+private slots:
+    void solveTask170() {
 
+    }
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
