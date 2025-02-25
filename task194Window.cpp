@@ -19,6 +19,7 @@ task194Window:: task194Window(QWidget *parent) : taskWindow(parent){
     getLayout()->removeWidget(getSolveButton()); // так как кнопка создалась в конструкторе родителся, то она появилась сверху
     getLayout()->addWidget(getSolveButton());
     connect(getSolveButton(), &QPushButton::clicked, this, &task194Window::solve);
+
 }
 QVector<QString> task194Window::parse(const QString &text, QChar delimiter) {
     QVector<QString> parsed;

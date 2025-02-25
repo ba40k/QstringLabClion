@@ -37,8 +37,16 @@ MainWindow::MainWindow(QWidget *parent)
     buttonsBox->addWidget(buttonForTask182);
     buttonsBox->addWidget(buttonForTask194);
 
+    task170 = new task170Window(this);
+    task182 = new task182Window(this);
+    task194 = new task194Window(this);
+
     mainMenuLayout->addLayout(greetingMessageBox);
     mainMenuLayout->addLayout(buttonsBox);
+
+    connect(buttonForTask170, &QPushButton::clicked, this, &MainWindow::solveTask170);
+    connect(buttonForTask182, &QPushButton::clicked, this, &MainWindow::solveTask182);
+    connect(buttonForTask194, &QPushButton::clicked, this, &MainWindow::solveTask194);
 
     setCentralWidget(centralWidget);
 }

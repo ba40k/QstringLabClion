@@ -18,6 +18,7 @@ protected:
     QVBoxLayout *layout;
     QWidget *centralWidget;
     QPushButton *solveButton;
+
 public:
     taskWindow(QWidget *parent = nullptr);
     virtual void solve() ;
