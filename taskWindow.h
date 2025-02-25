@@ -18,13 +18,14 @@ protected:
     QVBoxLayout *layout;
     QWidget *centralWidget;
     QPushButton *solveButton;
-
+    QPushButton *closeButton;
 public:
     taskWindow(QWidget *parent = nullptr);
     virtual void solve() ;
     virtual ~taskWindow();
     QLayout* getLayout();
     QPushButton* getSolveButton();
+    QPushButton* getCloseButton();
 };
 
 

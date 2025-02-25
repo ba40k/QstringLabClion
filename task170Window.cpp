@@ -5,7 +5,7 @@
 #include "task170Window.h"
 
 task170Window:: task170Window(QWidget *parent) : taskWindow(parent){
-    setWindowTitle("task170 solver");
+    setWindowTitle("task170");
     res = new QLabel();
     firstStringInput = new QLineEdit();
     firstStringInput->setPlaceholderText("Enter first string");
@@ -14,8 +14,8 @@ task170Window:: task170Window(QWidget *parent) : taskWindow(parent){
     getLayout()->addWidget(firstStringInput);
     getLayout()->addWidget(secondStringInput);
     getLayout()->addWidget(res);
-    getLayout()->removeWidget(getSolveButton()); // так как кнопка создалась в конструкторе родителся, то она появилась сверху
     getLayout()->addWidget(getSolveButton());
+    getLayout()->addWidget(getCloseButton());
     connect(getSolveButton(), &QPushButton::clicked, this, &task170Window::solve);
 }
 void task170Window::solve() {

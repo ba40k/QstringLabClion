@@ -37,9 +37,14 @@ MainWindow::MainWindow(QWidget *parent)
     buttonsBox->addWidget(buttonForTask182);
     buttonsBox->addWidget(buttonForTask194);
 
-    task170 = new task170Window(this);
-    task182 = new task182Window(this);
-    task194 = new task194Window(this);
+    closeButton = new QPushButton(centralWidget);
+    closeButton->setText("close");
+    connect(closeButton, &QPushButton::clicked, this, &MainWindow::close);
+    closeButton->setGeometry(QRect(10, 10, 50, 30));
+
+    task170 = new task170Window(centralWidget);
+    task182 = new task182Window(centralWidget);
+    task194 = new task194Window(centralWidget);
 
     mainMenuLayout->addLayout(greetingMessageBox);
     mainMenuLayout->addLayout(buttonsBox);

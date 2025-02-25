@@ -29,6 +29,7 @@ class MainWindow : public QMainWindow
     QPushButton* buttonForTask170;
     QPushButton* buttonForTask182;
     QPushButton* buttonForTask194;
+    QPushButton* closeButton;
     task170Window* task170;
     task182Window* task182;
     task194Window* task194;

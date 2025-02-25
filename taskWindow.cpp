@@ -9,14 +9,20 @@ taskWindow::taskWindow(QWidget *parent )  : QMainWindow(parent) {
         setGeometry(300, 300, 300, 200);
         solveButton = new QPushButton("Solve");
         layout = new QVBoxLayout();
-        layout->addWidget(solveButton);
         centralWidget = new QWidget();
         centralWidget->setLayout(layout);
+        closeButton = new QPushButton("Close");
         setCentralWidget(centralWidget);
+        connect(closeButton, &QPushButton::clicked, this, &QWidget::close);
 }
 void taskWindow::solve() {
 
 }
+
+QPushButton *taskWindow::getCloseButton() {
+        return closeButton;
+}
+
 QPushButton *taskWindow::getSolveButton() {
         return solveButton;
 }

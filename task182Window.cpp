@@ -5,7 +5,7 @@
 #include "task182Window.h"
 
 task182Window::task182Window(QWidget *parent) : taskWindow(parent){
-    setWindowTitle("task182 solver");
+    setWindowTitle("task182");
     res = new QLabel();
     inputText = new QTextEdit();
     inputText->setPlaceholderText("Enter sentence");
@@ -14,9 +14,8 @@ task182Window::task182Window(QWidget *parent) : taskWindow(parent){
     getLayout()->addWidget(inputText);
     getLayout()->addWidget(inputChar);
     getLayout()->addWidget(res);
-    getLayout()->removeWidget(getSolveButton()); // так как кнопка создалась в конструкторе родителся, то она появилась сверху
     getLayout()->addWidget(getSolveButton());
-
+    getLayout()->addWidget(getCloseButton());
     connect(getSolveButton(), &QPushButton::clicked, this, &task182Window::solve);
 }
 void task182Window::solve() {
