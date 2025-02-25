@@ -27,7 +27,6 @@ void task182Window::solve() {
         if (input[i]==wordStarer && newWord) {
             while( i!=input.length() && (input[i]!=' ')) {
                 ans.push_back(input[i]);
-                std::cout<<i<<' '<<input.length()<<'\n';
                 i++;
             }
             break;
