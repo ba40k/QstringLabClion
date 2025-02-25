@@ -5,6 +5,7 @@
 #include <QHBoxLayout>
 #include "taskWindow.h"
 #include "task170Window.h"
+#include "task182Window.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -13,11 +14,12 @@ int main(int argc, char *argv[])
    // t.show();
 
     //var7
+    task182Window tsl;
+    tsl.show();
 
     taskWindow tw;
     tw.show();
-    task170Window tsl;
-    tsl.show();
+
 
 
     w.show();
