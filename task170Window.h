@@ -7,19 +7,19 @@
 
 #include "taskWindow.h"
 #include <QLineEdit>
-class task170Window : public taskWindow  {
+
+class Task170Window : public TaskWindow {
 private:
-     QLineEdit *firstStringInput;
-     QLineEdit *secondStringInput;
-     QLabel *res;
+    QLineEdit *firstStringInput;
+    QLineEdit *secondStringInput;
+    QLabel *res;
 
 public:
-     task170Window(QWidget *parent = nullptr);
+    Task170Window(QWidget *parent = nullptr);
+
 private slots:
     void solve() override;
-
 };
-
 
 
 #endif //TASK170WINDOW_H

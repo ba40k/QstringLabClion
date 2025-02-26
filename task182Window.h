@@ -11,14 +11,14 @@
 #include <QLineEdit>
 #include <QTextEdit>
 
-class task182Window : public taskWindow  {
+class Task182Window : public TaskWindow  {
 private:
     QTextEdit *inputText;
     QLineEdit *inputChar;
     QLabel *res;
 
 public:
-    task182Window(QWidget *parent = nullptr);
+    Task182Window(QWidget *parent = nullptr);
     private slots:
         void solve() override;
 

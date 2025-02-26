@@ -7,8 +7,8 @@
 #include <iostream>
 #include"logger.h"
 static Logger logger;
-task194Window:: task194Window(QWidget *parent) : taskWindow(parent){
-    qInfo()<<"EntryPoint| task194Window(QWidget *parent)\n";
+Task194Window:: Task194Window(QWidget *parent) : TaskWindow(parent){
+    qInfo()<<"EntryPoint| Task194Window(QWidget *parent)\n";
     setWindowTitle("task194");
     res = new QLabel();
     firstTextInput = new QTextEdit();
@@ -20,12 +20,12 @@ task194Window:: task194Window(QWidget *parent) : taskWindow(parent){
     getLayout()->addWidget(res);
     getLayout()->addWidget(getSolveButton());
     getLayout()->addWidget(getCloseButton());
-    connect(getSolveButton(), &QPushButton::clicked, this, &task194Window::solve);
-    qInfo()<<"End| task194Window(QWidget *parent)\n";
+    connect(getSolveButton(), &QPushButton::clicked, this, &Task194Window::solve);
+    qInfo()<<"End| Task194Window(QWidget *parent)\n";
 
 }
-QVector<QString> task194Window::parse(const QString &text, QChar delimiter) {
-    qInfo()<<"EntryPoint| task194Window::parse(const QString &text,QChar delimiter)\n";
+QVector<QString> Task194Window::parse(const QString &text, QChar delimiter) {
+    qInfo()<<"EntryPoint| Task194Window::parse(const QString &text,QChar delimiter)\n";
     QVector<QString> parsed;
     QString buffer;
     for (int i = 0;i<text.length();i++) {
@@ -41,8 +41,8 @@ QVector<QString> task194Window::parse(const QString &text, QChar delimiter) {
     return parsed;
 }
 
-void task194Window::solve() {
-    qInfo()<<"EntryPoint| task194Window::solve()\n";
+void Task194Window::solve() {
+    qInfo()<<"EntryPoint| Task194Window::solve()\n";
     auto firstText = parse(firstTextInput->toPlainText());
 
     auto secondText = parse(secondTextInput->toPlainText());
@@ -72,5 +72,5 @@ void task194Window::solve() {
 
     res->setWordWrap(true);
     res->setText(ans);
-    qInfo()<<"End| task194Window::solve()\n";
+    qInfo()<<"End| Task194Window::solve()\n";
 }

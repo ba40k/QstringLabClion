@@ -6,8 +6,8 @@
 #include"logger.h"
 static Logger logger;
 
-taskWindow::taskWindow(QWidget *parent )  : QMainWindow(parent) {
-        qInfo()<<"EntryPoint| taskWindow(QWidget *parent)\n";
+TaskWindow::TaskWindow(QWidget *parent )  : QMainWindow(parent) {
+        qInfo()<<"EntryPoint| TaskWindow(QWidget *parent)\n";
         setGeometry(300, 300, 400, 200);
         solveButton = new QPushButton("Solve");
         layout = new QVBoxLayout();
@@ -16,27 +16,27 @@ taskWindow::taskWindow(QWidget *parent )  : QMainWindow(parent) {
         closeButton = new QPushButton("Close");
         setCentralWidget(centralWidget);
         connect(closeButton, &QPushButton::clicked, this, &QWidget::close);
-        qInfo()<<"End| taskWindow(QWidget *parent)\n";
+        qInfo()<<"End| TaskWindow(QWidget *parent)\n";
 }
 
-QPushButton *taskWindow::getCloseButton() {
+QPushButton *TaskWindow::getCloseButton() {
         qInfo()<<"EntryPoint| TaskWindow::getCloseButton()\n";
         qInfo()<<"End| TaskWindow::getCloseButton()\n";
         return closeButton;
 }
 
-QPushButton *taskWindow::getSolveButton() {
+QPushButton *TaskWindow::getSolveButton() {
         qInfo()<<"EntryPoint| TaskWindow::getSolveButton()\n";
         qInfo()<<"End| TaskWindow::getSolveButton()\n";
         return solveButton;
 }
 
-QLayout* taskWindow::getLayout() {
+QLayout* TaskWindow::getLayout() {
         qInfo()<<"EntryPoint| TaskWindow::getLayout()\n";
         qInfo()<<"End| TaskWindow::getLayout()\n";
         return layout;
 }
-taskWindow::~taskWindow() {
-        qInfo()<<"EntryPoint| ~taskWindow()\n";
-        qInfo()<<"End| TaskWindow::~taskWindow()\n";
+TaskWindow::~TaskWindow() {
+        qInfo()<<"EntryPoint| ~TaskWindow()\n";
+        qInfo()<<"End| TaskWindow::~TaskWindow()\n";
 }

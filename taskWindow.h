@@ -12,7 +12,7 @@
 #include <QVBoxLayout>
 #include <QWidget>
 
-class taskWindow : public QMainWindow {
+class TaskWindow : public QMainWindow {
 protected:
     Q_OBJECT
     QVBoxLayout *layout;
@@ -20,9 +20,9 @@ protected:
     QPushButton *solveButton;
     QPushButton *closeButton;
 public:
-    taskWindow(QWidget *parent = nullptr);
+    TaskWindow(QWidget *parent = nullptr);
     virtual void solve() =0 ;
-    virtual ~taskWindow();
+    virtual ~TaskWindow();
     QLayout* getLayout();
     QPushButton* getSolveButton();
     QPushButton* getCloseButton();

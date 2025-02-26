@@ -28,9 +28,9 @@ class MainWindow : public QMainWindow
     QPushButton* buttonForTask182;
     QPushButton* buttonForTask194;
     QPushButton* closeButton;
-    task170Window* task170;
-    task182Window* task182;
-    task194Window* task194;
+    Task170Window* task170;
+    Task182Window* task182;
+    Task194Window* task194;
 private slots:
     void solveTask170() {
         task170->show();

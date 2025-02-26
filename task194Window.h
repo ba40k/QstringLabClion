@@ -9,7 +9,7 @@
 #include <QLineEdit>
 #include <QTextEdit>
 
-class task194Window : public taskWindow  {
+class Task194Window : public TaskWindow  {
 private:
     QTextEdit *firstTextInput;
     QTextEdit *secondTextInput;
@@ -17,7 +17,7 @@ private:
     QVector<QString> parse(const QString &text, QChar delimiter = ' ');
 
 public:
-    task194Window(QWidget *parent = nullptr);
+    Task194Window(QWidget *parent = nullptr);
     private slots:
         void solve() override;
 
