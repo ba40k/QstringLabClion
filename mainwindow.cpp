@@ -4,10 +4,13 @@
 #include <QVBoxLayout>
 #include <QLabel>
 #include <QPushButton>
+#include <QApplication>
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+
 
     centralWidget = new QWidget(this);
     setMinimumHeight(300);
