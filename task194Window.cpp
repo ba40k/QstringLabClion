@@ -7,6 +7,7 @@
 #include <iostream>
 
 task194Window:: task194Window(QWidget *parent) : taskWindow(parent){
+    qInfo()<<"EntryPoint| task194Window(QWidget *parent)\n";
     setWindowTitle("task194");
     res = new QLabel();
     firstTextInput = new QTextEdit();
@@ -19,9 +20,11 @@ task194Window:: task194Window(QWidget *parent) : taskWindow(parent){
     getLayout()->addWidget(getSolveButton());
     getLayout()->addWidget(getCloseButton());
     connect(getSolveButton(), &QPushButton::clicked, this, &task194Window::solve);
+    qInfo()<<"End| task194Window(QWidget *parent)\n";
 
 }
 QVector<QString> task194Window::parse(const QString &text, QChar delimiter) {
+    qInfo()<<"EntryPoint| task194Window::parse(const QString &text,QChar delimiter)\n";
     QVector<QString> parsed;
     QString buffer;
     for (int i = 0;i<text.length();i++) {
@@ -38,6 +41,7 @@ QVector<QString> task194Window::parse(const QString &text, QChar delimiter) {
 }
 
 void task194Window::solve() {
+    qInfo()<<"EntryPoint| task194Window::solve()\n";
     auto firstText = parse(firstTextInput->toPlainText());
 
     auto secondText = parse(secondTextInput->toPlainText());
@@ -67,4 +71,5 @@ void task194Window::solve() {
 
     res->setWordWrap(true);
     res->setText(ans);
+    qInfo()<<"End| task194Window::solve()\n";
 }

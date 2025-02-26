@@ -3,8 +3,9 @@
 //
 
 #include "task170Window.h"
-
+#include "logger.h"
 task170Window:: task170Window(QWidget *parent) : taskWindow(parent){
+    qInfo()<<"EntryPoint| task170Window(QWidget *parent)\n";
     setWindowTitle("task170");
     res = new QLabel();
     firstStringInput = new QLineEdit();
@@ -17,8 +18,10 @@ task170Window:: task170Window(QWidget *parent) : taskWindow(parent){
     getLayout()->addWidget(getSolveButton());
     getLayout()->addWidget(getCloseButton());
     connect(getSolveButton(), &QPushButton::clicked, this, &task170Window::solve);
+    qInfo()<<"End| task170Window(QWidget *parent)\n";
 }
 void task170Window::solve() {
+    qInfo()<<"EntryPoint| task170Window::solve()\n";
     QString firstString = firstStringInput->text();
     QString secondString = secondStringInput->text();
     QMap<QChar,int> firstStringCharCounter;
@@ -45,4 +48,5 @@ void task170Window::solve() {
 
 
     res->setText(ans);
+    qInfo()<<"End| task170Window::solve()\n";
 }

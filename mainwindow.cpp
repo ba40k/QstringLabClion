@@ -5,13 +5,13 @@
 #include <QLabel>
 #include <QPushButton>
 #include <QApplication>
-
+#include "logger.h"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
 
-
+    qInfo() << "EntryPoint| MainWindow::MainWindow(QWidget *parent)\n";
     centralWidget = new QWidget(this);
     setMinimumHeight(300);
     setMinimumWidth(300);
@@ -57,9 +57,12 @@ MainWindow::MainWindow(QWidget *parent)
     connect(buttonForTask194, &QPushButton::clicked, this, &MainWindow::solveTask194);
 
     setCentralWidget(centralWidget);
+    qInfo() << "End| MainWindow::MainWindow(QWidget *parent)\n";
 }
 
 MainWindow::~MainWindow()
 {
+    qInfo() << "EntryPoint| MainWindow::MainWindow(QWidget *parent)\n";
     delete ui;
+    qInfo() << "End| MainWindow::MainWindow(QWidget *parent)\n";
 }

@@ -21,7 +21,7 @@ protected:
     QPushButton *closeButton;
 public:
     taskWindow(QWidget *parent = nullptr);
-    virtual void solve() ;
+    virtual void solve() =0 ;
     virtual ~taskWindow();
     QLayout* getLayout();
     QPushButton* getSolveButton();
