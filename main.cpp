@@ -3,9 +3,10 @@
 #include <QWidget>
 #include <QFile>
 #include"logger.h"
+Logger logger;
 int main(int argc, char *argv[])
 {
-    QtMessageHandler originalHandler =  qInstallMessageHandler(logToFile);
+
     qInfo() << "EntryPoint| int main(int argc, char *argv[])\n";
     QApplication a(argc, argv);
     MainWindow w;

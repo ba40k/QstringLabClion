@@ -3,7 +3,8 @@
 //
 
 #include "taskWindow.h"
-
+#include"logger.h"
+static Logger logger;
 
 taskWindow::taskWindow(QWidget *parent )  : QMainWindow(parent) {
         qInfo()<<"EntryPoint| taskWindow(QWidget *parent)\n";

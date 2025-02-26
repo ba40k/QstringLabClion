@@ -6,6 +6,7 @@
 #include <QPushButton>
 #include <QApplication>
 #include "logger.h"
+static Logger logger;
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)

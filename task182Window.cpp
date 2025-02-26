@@ -3,6 +3,8 @@
 //
 
 #include "task182Window.h"
+#include"logger.h"
+static Logger logger;
 task182Window::task182Window(QWidget *parent) : taskWindow(parent){
     qInfo("EntryPoint| task182Window(QWidget *parent)\n");
     setWindowTitle("task182");

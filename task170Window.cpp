@@ -4,6 +4,7 @@
 
 #include "task170Window.h"
 #include "logger.h"
+static Logger logger;
 task170Window:: task170Window(QWidget *parent) : taskWindow(parent){
     qInfo()<<"EntryPoint| task170Window(QWidget *parent)\n";
     setWindowTitle("task170");
